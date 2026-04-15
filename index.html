@@ -11,40 +11,32 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(135deg, #020617, #0ea5e9);
     color: white;
+    overflow-x: hidden;
 }
 
-/* HEADER */
+/* NAV */
 header {
     text-align: center;
     padding: 20px;
-}
-
-.logo {
-    width: 120px;
-    display: block;
-    margin: auto;
-}
-
-.company-name {
-    font-size: 26px;
+    font-size: 28px;
     font-weight: bold;
     letter-spacing: 2px;
 }
 
-.company-name span {
+header span {
     color: #38bdf8;
 }
 
 /* HERO */
 .hero {
     text-align: center;
-    padding: 60px 20px;
+    padding: 100px 20px;
 }
 
 .hero h1 {
-    font-size: 20px;
+    font-size: 22px;
     color: #e5e7eb;
-    max-width: 600px;
+    max-width: 550px;
     margin: auto;
     line-height: 1.5;
 }
@@ -52,12 +44,20 @@ header {
 .hero p {
     font-size: 13px;
     color: #9ca3af;
-    margin-top: 8px;
+    max-width: 480px;
+    margin: 6px auto;
+    line-height: 1.4;
+}
+
+/* GLOW ANIMATION */
+@keyframes glow {
+    from { text-shadow: 0 0 10px #38bdf8; }
+    to { text-shadow: 0 0 25px #0ea5e9; }
 }
 
 /* SECTION */
 .section {
-    padding: 30px 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
@@ -66,16 +66,16 @@ header {
     background: rgba(30, 41, 59, 0.6);
     backdrop-filter: blur(10px);
     margin: 20px auto;
-    padding: 20px;
-    border-radius: 12px;
+    padding: 25px;
+    border-radius: 15px;
     max-width: 650px;
-    transition: 0.3s;
+    transition: 0.4s;
     border: 1px solid rgba(56,189,248,0.2);
 }
 
 .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 0 15px rgba(56,189,248,0.3);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 20px rgba(56,189,248,0.4);
 }
 
 /* GRID */
@@ -94,22 +94,28 @@ header {
 
 /* TEAM */
 .team-img {
-    width: 120px;
+    width: 140px;
     border-radius: 50%;
-    margin-top: 10px;
-    border: 2px solid #38bdf8;
+    margin-top: 15px;
+    border: 3px solid #38bdf8;
+    transition: 0.3s;
+}
+
+.team-img:hover {
+    transform: scale(1.1);
 }
 
 /* BUTTON */
 button {
-    background: #38bdf8;
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
     border: none;
-    padding: 10px 20px;
+    padding: 12px 22px;
     color: black;
     border-radius: 6px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 15px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 button:hover {
@@ -119,9 +125,9 @@ button:hover {
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 15px;
+    padding: 20px;
     background: #020617;
-    font-size: 13px;
+    font-size: 14px;
 }
 </style>
 
@@ -130,8 +136,8 @@ footer {
 <body>
 
 <header>
-<img src="logo.JPG" class="logo">
-<div class="company-name">VAINIX <span>SYSTEMS</span></div>
+<img src="logo.JPG" style="width:110px; display:block; margin:auto;">
+<span style="margin-left:10px;">VAINIX <span style="color:#38bdf8;">SYSTEMS</span></span>
 </header>
 
 <div class="hero">
@@ -146,8 +152,8 @@ Building next-generation embedded solutions for automotive, EV, and connected de
 <div class="card">
 <h2>About Us</h2>
 <p>
-Vainix Systems is a deep-tech startup focused on embedded systems, automotive software, and IoT innovation.
-We build intelligent, scalable, and real-world engineering solutions.
+Vainix Systems is a deep-tech startup building intelligent embedded and automotive solutions.
+Focused on CAN, EV systems, and IoT innovation.
 </p>
 </div>
 
@@ -200,7 +206,7 @@ We build intelligent, scalable, and real-world engineering solutions.
 <p>
 <b>Sunil Bellurge</b><br>
 Embedded Software Engineer<br>
-Embedded Systems | Semiconductor | OS | Automotive<br>
+Specialized in Embedded Systems, Semiconductor, OS & Automotive Software<br>
 Bangalore, India
 </p>
 </div>
@@ -210,7 +216,7 @@ Bangalore, India
 <p>
 <b>Abhinav Patil</b><br>
 Embedded Software Specialist<br>
-Operating Systems | Automotive | IoT Devices
+Specialized in Operating Systems, Automotive Software & IoT Devices
 </p>
 </div>
 
