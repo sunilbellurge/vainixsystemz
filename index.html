@@ -9,33 +9,43 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #020617, #0ea5e9);
+    background: linear-gradient(135deg, #020617, #0369a1);
     color: white;
     overflow-x: hidden;
 }
 
-/* NAV */
+/* HEADER */
 header {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
     padding: 20px;
-    font-size: 28px;
+    font-size: 26px;
     font-weight: bold;
     letter-spacing: 2px;
 }
 
-header span {
-    color: #38bdf8;
+.logo {
+    width: 120px;
+    height: auto;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.05);
 }
 
 /* HERO */
 .hero {
     text-align: center;
-    padding: 100px 20px;
+    padding: 80px 20px;
 }
 
 .hero h1 {
-    font-size: 40px;
-    background: linear-gradient(90deg, #38bdf8);
+    font-size: 34px;
+    background: linear-gradient(90deg, #38bdf8, #0ea5e9);
     -webkit-background-clip: text;
     color: transparent;
     animation: glow 2s infinite alternate;
@@ -48,10 +58,11 @@ header span {
     margin: 6px auto;
     line-height: 1.4;
 }
-/* GLOW ANIMATION */
+
+/* GLOW */
 @keyframes glow {
     from { text-shadow: 0 0 10px #38bdf8; }
-    to { text-shadow: 0 0 25px #6366f1; }
+    to { text-shadow: 0 0 25px #0ea5e9; }
 }
 
 /* SECTION */
@@ -91,22 +102,17 @@ header span {
     }
 }
 
-/* FOUNDER */
+/* IMAGE */
 .founder-img {
     width: 140px;
     border-radius: 50%;
     margin-top: 15px;
     border: 3px solid #38bdf8;
-    transition: 0.3s;
-}
-
-.founder-img:hover {
-    transform: scale(1.1);
 }
 
 /* BUTTON */
 button {
-    background: linear-gradient(135deg, #38bdf8, #6366f1);
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
     border: none;
     padding: 12px 22px;
     color: black;
@@ -135,13 +141,15 @@ footer {
 <body>
 
 <header>
-<img src="logo.png" style="width:60px; vertical-align:middle;">
-<span style="margin-left:10px;">VAINIX <span style="color:#38bdf8;">SYSTEMS</span></span>
+<img src="logo.JPG" class="logo">
+<span>VAINIX <span style="color:#38bdf8;">SYSTEMS</span></span>
 </header>
 
 <div class="hero">
-<h1>Building next-generation embedded solutions for automotive, EV, and connected devices — engineered for performance, reliability, and scale.</h1>
-<p>Powering Intelligent Machines</p>
+<h1>From Signals to Intelligent Systems</h1>
+<p>
+Building next-generation embedded solutions for automotive, EV, and connected devices — engineered for performance, reliability, and scale.
+</p>
 </div>
 
 <div class="section">
@@ -197,11 +205,9 @@ Focused on CAN, EV systems, and IoT innovation.
 <div class="section">
 
 <div class="card">
-
 <img src="your-photo.jpg" class="founder-img">
 <p>
-<b>Sunil Bellurge</b><br>
-Embedded Software Engineer<br>
+Embedded Software Engineers<br>
 Specialized in Embedded Systems, Semiconductor, OS & Automotive Software<br>
 Bangalore, India
 </p>
