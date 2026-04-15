@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vainix Systems</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f172a;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-box {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #38bdf8, #6366f1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: bold;
+    color: black;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    animation: fadeIn 1.5s ease-in;
+}
+
+.hero h1 {
+    font-size: 36px;
+}
+
+.hero p {
+    color: #38bdf8;
+    font-size: 20px;
+}
+
+/* SECTIONS */
+.section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.card {
+    background: #1e293b;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 650px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+/* FOUNDER */
+.founder-img {
+    width: 140px;
+    border-radius: 50%;
+    margin-top: 15px;
+    border: 3px solid #38bdf8;
+}
+
+/* BUTTON */
+button {
+    background: linear-gradient(135deg, #38bdf8, #6366f1);
+    border: none;
+    padding: 12px 22px;
+    color: black;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* WHY US */
+.grid {
+    display: grid;
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+@media(min-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+    font-size: 14px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1;}
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+    <div class="logo-box">V</div>
+    VAINIX SYSTEMS
+</div>
+</header>
+
+<div class="hero">
+<h1>From Signals to Systems</h1>
+<p>Powering Intelligent Machines</p>
+</div>
+
+<div class="section">
+
+<div class="card">
+<h2>About Us</h2>
+<p>
+Vainix Systems is a deep-tech startup focused on embedded systems, automotive innovation, and intelligent connected devices.
+We specialize in CAN communication, EV systems, and IoT solutions.
+</p>
+</div>
+
+<div class="card">
+<h2>Our Products</h2>
+<p>
+🚗 Smart CAN Logger <br>
+⚡ EV Charging Systems <br>
+📡 IoT Monitoring Devices <br>
+🚘 V2V & V2X Communication
+</p>
+</div>
+
+</div>
+
+<div class="section">
+<h2>Why Choose Us</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Deep Engineering Expertise</h3>
+<p>Strong background in embedded systems and automotive software.</p>
+</div>
+
+<div class="card">
+<h3>Cost-Effective Solutions</h3>
+<p>Affordable products designed for real-world Indian problems.</p>
+</div>
+
+<div class="card">
+<h3>Scalable Technology</h3>
+<p>Built for future expansion into EV and smart mobility systems.</p>
+</div>
+
+<div class="card">
+<h3>Real-Time Performance</h3>
+<p>Optimized for speed, reliability, and efficiency.</p>
+</div>
+
+</div>
+</div>
+
+<div class="section">
+
+<div class="card">
+<h2>Founder</h2>
+<img src="your-photo.jpg" class="founder-img">
+<p>
+<b>Sunil Bellurge</b><br>
+Embedded Software Engineer<br>
+Expertise: Embedded Systems, Semiconductor, OS, Automotive Software<br>
+Location: Bangalore, India
+</p>
+</div>
+
+<div class="card">
+<h2>Contact</h2>
+<p>
+📧 sunilbellurge73@gmail.com <br>
+📞 +91 8867852221
+</p>
+
+<a href="https://wa.me/918867852221">
+<button>Chat on WhatsApp</button>
+</a>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 Vainix Systems. All rights reserved.
+</footer>
+
+</body>
+</html>
