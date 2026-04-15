@@ -9,65 +9,55 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #020617, #0369a1);
+    background: linear-gradient(135deg, #020617, #0ea5e9);
     color: white;
-    overflow-x: hidden;
 }
 
 /* HEADER */
 header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
+    text-align: center;
     padding: 20px;
+}
+
+.logo {
+    width: 120px;
+    display: block;
+    margin: auto;
+}
+
+.company-name {
     font-size: 26px;
     font-weight: bold;
     letter-spacing: 2px;
 }
 
-.logo {
-    width: 120px;
-    height: auto;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-.logo:hover {
-    transform: scale(1.05);
+.company-name span {
+    color: #38bdf8;
 }
 
 /* HERO */
 .hero {
     text-align: center;
-    padding: 80px 20px;
+    padding: 60px 20px;
 }
 
 .hero h1 {
-    font-size: 34px;
-    background: linear-gradient(90deg, #38bdf8, #0ea5e9);
-    -webkit-background-clip: text;
-    color: transparent;
-    animation: glow 2s infinite alternate;
+    font-size: 20px;
+    color: #e5e7eb;
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.5;
 }
 
 .hero p {
     font-size: 13px;
     color: #9ca3af;
-    max-width: 480px;
-    margin: 6px auto;
-    line-height: 1.4;
-}
-
-/* GLOW */
-@keyframes glow {
-    from { text-shadow: 0 0 10px #38bdf8; }
-    to { text-shadow: 0 0 25px #0ea5e9; }
+    margin-top: 8px;
 }
 
 /* SECTION */
 .section {
-    padding: 40px 20px;
+    padding: 30px 20px;
     text-align: center;
 }
 
@@ -76,16 +66,16 @@ header {
     background: rgba(30, 41, 59, 0.6);
     backdrop-filter: blur(10px);
     margin: 20px auto;
-    padding: 25px;
-    border-radius: 15px;
+    padding: 20px;
+    border-radius: 12px;
     max-width: 650px;
-    transition: 0.4s;
+    transition: 0.3s;
     border: 1px solid rgba(56,189,248,0.2);
 }
 
 .card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 0 20px rgba(56,189,248,0.4);
+    transform: translateY(-6px);
+    box-shadow: 0 0 15px rgba(56,189,248,0.3);
 }
 
 /* GRID */
@@ -102,25 +92,24 @@ header {
     }
 }
 
-/* IMAGE */
-.founder-img {
-    width: 140px;
+/* TEAM */
+.team-img {
+    width: 120px;
     border-radius: 50%;
-    margin-top: 15px;
-    border: 3px solid #38bdf8;
+    margin-top: 10px;
+    border: 2px solid #38bdf8;
 }
 
 /* BUTTON */
 button {
-    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    background: #38bdf8;
     border: none;
-    padding: 12px 22px;
+    padding: 10px 20px;
     color: black;
     border-radius: 6px;
     cursor: pointer;
-    margin-top: 15px;
+    margin-top: 10px;
     font-weight: bold;
-    transition: 0.3s;
 }
 
 button:hover {
@@ -130,9 +119,9 @@ button:hover {
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     background: #020617;
-    font-size: 14px;
+    font-size: 13px;
 }
 </style>
 
@@ -142,14 +131,14 @@ footer {
 
 <header>
 <img src="logo.JPG" class="logo">
-<span>VAINIX <span style="color:#38bdf8;">SYSTEMS</span></span>
+<div class="company-name">VAINIX <span>SYSTEMS</span></div>
 </header>
 
 <div class="hero">
-<h1>From Signals to Intelligent Systems</h1>
-<p>
+<h1>
 Building next-generation embedded solutions for automotive, EV, and connected devices — engineered for performance, reliability, and scale.
-</p>
+</h1>
+<p>From Signals to Systems</p>
 </div>
 
 <div class="section">
@@ -157,8 +146,8 @@ Building next-generation embedded solutions for automotive, EV, and connected de
 <div class="card">
 <h2>About Us</h2>
 <p>
-Vainix Systems is a deep-tech startup building intelligent embedded and automotive solutions.
-Focused on CAN, EV systems, and IoT innovation.
+Vainix Systems is a deep-tech startup focused on embedded systems, automotive software, and IoT innovation.
+We build intelligent, scalable, and real-world engineering solutions.
 </p>
 </div>
 
@@ -204,13 +193,27 @@ Focused on CAN, EV systems, and IoT innovation.
 
 <div class="section">
 
+<div class="grid">
+
 <div class="card">
-<img src="your-photo.jpg" class="founder-img">
+<img src="your-photo.jpg" class="team-img">
 <p>
+<b>Sunil Bellurge</b><br>
 Embedded Software Engineer<br>
-Specialized in Embedded Systems, Semiconductor, OS & Automotive Software<br>
+Embedded Systems | Semiconductor | OS | Automotive<br>
 Bangalore, India
 </p>
+</div>
+
+<div class="card">
+<img src="abhinav.jpg" class="team-img">
+<p>
+<b>Abhinav Patil</b><br>
+Embedded Software Specialist<br>
+Operating Systems | Automotive | IoT Devices
+</p>
+</div>
+
 </div>
 
 <div class="card">
