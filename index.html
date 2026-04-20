@@ -112,6 +112,8 @@
     .product-card:nth-child(3) .product-icon { background: rgba(255,107,53,0.1); }
     .product-card:nth-child(4) .product-icon { background: rgba(160,100,255,0.1); }
     .product-card:nth-child(5) .product-icon { background: rgba(255,200,0,0.1); }
+    .product-card:nth-child(6) .product-icon { background: rgba(0,230,180,0.1); }
+    .product-card:nth-child(7) .product-icon { background: rgba(255,100,180,0.1); }
     .product-card h3 { font-family: var(--font-head); font-size: 1.15rem; font-weight: 700; margin-bottom: 0.6rem; }
     .product-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; flex: 1; }
     .product-card-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 1.2rem; flex-wrap: wrap; gap: 0.6rem; }
@@ -148,6 +150,8 @@
     .arch-block.purple { background: rgba(160,100,255,0.08); border-color: rgba(160,100,255,0.25); color: #a064ff; }
     .arch-block.yellow { background: rgba(255,200,0,0.08); border-color: rgba(255,200,0,0.25); color: #ffc800; }
     .arch-block.teal { background: rgba(0,230,210,0.08); border-color: rgba(0,230,210,0.25); color: #00e6d2; }
+    .arch-block.mint { background: rgba(0,230,180,0.08); border-color: rgba(0,230,180,0.25); color: #00e6b4; }
+    .arch-block.pink { background: rgba(255,100,180,0.08); border-color: rgba(255,100,180,0.25); color: #ff64b4; }
     .arch-arrow { text-align: center; color: var(--muted); font-size: 1rem; line-height: 1; padding-left: 106px; }
 
     .modal-section { margin-bottom: 2rem; }
@@ -168,9 +172,6 @@
     .comp-badge.fw { background: rgba(255,107,53,0.12); color: #ff6b35; border: 1px solid rgba(255,107,53,0.25); }
     .comp-badge.proto { background: rgba(160,100,255,0.12); color: #a064ff; border: 1px solid rgba(160,100,255,0.25); }
     .comp-badge.os { background: rgba(255,200,0,0.12); color: #ffc800; border: 1px solid rgba(255,200,0,0.25); }
-    .comp-info h4 { font-size: 0.85rem; font-weight: 600; margin-bottom: 0.15rem; }
-    .comp-info p { font-size: 0.77rem; color: var(--muted); line-height: 1.5; }
-
     .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
     .why-card { padding: 2rem 1.5rem; border-radius: 16px; background: var(--card); border: 1px solid var(--border); transition: all 0.3s; text-align: center; }
     .why-card:hover { border-color: rgba(0,255,153,0.3); transform: translateY(-3px); }
@@ -459,7 +460,6 @@
       </div>
     </div>
 
-    <!-- NEW: Automotive HPC -->
     <div class="product-card">
       <div class="product-icon">🖥️</div>
       <h3>High Performance Computer for Automotive</h3>
@@ -467,6 +467,34 @@
       <div class="product-card-footer">
         <span class="product-tag" style="color:#ffc800;border-color:rgba(255,200,0,0.25);background:rgba(255,200,0,0.08)">Automotive HPC</span>
         <button class="arch-link" onclick="openModal('hpc')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          Architecture
+        </button>
+      </div>
+    </div>
+
+    <!-- NEW: Midaas -->
+    <div class="product-card">
+      <div class="product-icon">💎</div>
+      <h3>Midaas</h3>
+      <p>Modular intelligent data acquisition and analytics system for real-time embedded diagnostics, signal processing, and predictive insights across automotive and industrial platforms.</p>
+      <div class="product-card-footer">
+        <span class="product-tag" style="color:#00e6b4;border-color:rgba(0,230,180,0.25);background:rgba(0,230,180,0.08)">Data Acquisition</span>
+        <button class="arch-link" onclick="openModal('midaas')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          Architecture
+        </button>
+      </div>
+    </div>
+
+    <!-- NEW: Zonal Architecture -->
+    <div class="product-card">
+      <div class="product-icon">🗂️</div>
+      <h3>Zonal Architecture</h3>
+      <p>Next-generation zonal E/E architecture platform replacing traditional domain-based vehicle networks with zone controllers — reducing wiring complexity and enabling centralized software-defined vehicle control.</p>
+      <div class="product-card-footer">
+        <span class="product-tag" style="color:#ff64b4;border-color:rgba(255,100,180,0.25);background:rgba(255,100,180,0.08)">Vehicle E/E</span>
+        <button class="arch-link" onclick="openModal('zonal')">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
           Architecture
         </button>
@@ -505,7 +533,7 @@
         <div class="team-img-placeholder" style="display:none">👨‍💻</div>
       </div>
       <div class="team-info">
-        <h3>Sunil Bellurge</h3>
+        <h3>Sunil B</h3>
         <div class="team-role">· Embedded Software Engineer</div>
         <p class="team-desc">Specialized in Embedded Systems, Semiconductor, OS & Automotive Software.</p>
         <div class="team-location"><span>📍</span> Bangalore, India</div>
@@ -556,7 +584,7 @@
         </a>
         <a href="tel:+918867852221" class="contact-link cl-phone">
           <div class="contact-link-icon">📞</div>
-          <div class="contact-link-text"><span class="contact-link-label">Phone</span><span class="contact-link-val">+91 88678 52221</span></div>
+          <div class="contact-link-text"><span class="contact-link-label">Phone</span><span class="contact-link-val">+91 9945578504</span></div>
         </a>
         <a href="https://wa.me/918867852221" target="_blank" class="contact-link cl-wa">
           <div class="contact-link-icon">💬</div>
@@ -801,6 +829,80 @@
         { badge: 'HW', badgeClass: 'hw', name: 'Hardware Security Module (HSM)', desc: 'On-chip HSM for secure boot chain, key storage, MAC/cipher acceleration, and SecOC message auth.' },
         { badge: 'SW', badgeClass: 'sw', name: 'AUTOSAR UCM (OTA Manager)', desc: 'Update & Configuration Management module for cryptographically signed OTA package orchestration.' },
         { badge: 'PROTO', badgeClass: 'proto', name: '1000BASE-T1 Automotive Ethernet', desc: 'IEEE 802.3bp single-pair gigabit Ethernet backbone for HPC-to-zone-controller communication.' },
+      ]
+    },
+
+    midaas: {
+      icon: '💎', iconBg: 'rgba(0,230,180,0.1)',
+      title: 'Midaas',
+      subtitle: 'High-Level Architecture · Modular Intelligent Data Acquisition & Analytics System',
+      diagram: `<div class="arch-diagram"><div class="arch-diagram-title">System Architecture Overview</div><div class="arch-layers">
+        <div class="arch-layer"><div class="arch-layer-label">Input Layer</div><div class="arch-layer-blocks"><div class="arch-block blue">CAN / CAN-FD Channels</div><div class="arch-block blue">Analog Signal Inputs</div><div class="arch-block blue">Digital I/O</div><div class="arch-block blue">Serial / UART</div></div></div>
+        <div class="arch-arrow">↓</div>
+        <div class="arch-layer"><div class="arch-layer-label">Acquisition</div><div class="arch-layer-blocks"><div class="arch-block teal">Multi-Channel ADC Frontend</div><div class="arch-block teal">Hardware Timestamping</div><div class="arch-block teal">Sync Engine (PPS / GPS)</div></div></div>
+        <div class="arch-arrow">↓</div>
+        <div class="arch-layer"><div class="arch-layer-label">Processing</div><div class="arch-layer-blocks"><div class="arch-block mint">ARM Cortex-A + FPGA Co-Proc</div><div class="arch-block mint">Signal Conditioning DSP</div><div class="arch-block mint">DBC / A2L Decoder</div></div></div>
+        <div class="arch-arrow">↓</div>
+        <div class="arch-layer"><div class="arch-layer-label">Analytics</div><div class="arch-layer-blocks"><div class="arch-block green">Edge Anomaly Detection</div><div class="arch-block green">Statistical Engine</div><div class="arch-block green">Threshold & Alert Manager</div></div></div>
+        <div class="arch-arrow">↓</div>
+        <div class="arch-layer"><div class="arch-layer-label">Storage</div><div class="arch-layer-blocks"><div class="arch-block orange">NVMe / SD Circular Buffer</div><div class="arch-block orange">MDF4 / CSV / Parquet</div><div class="arch-block orange">Indexed Query Engine</div></div></div>
+        <div class="arch-arrow">↓</div>
+        <div class="arch-layer"><div class="arch-layer-label">Output</div><div class="arch-layer-blocks"><div class="arch-block purple">REST API / WebSocket</div><div class="arch-block purple">Cloud Telemetry (MQTT)</div><div class="arch-block purple">PC Dashboard (USB / ETH)</div></div></div>
+      </div></div>`,
+      functionality: [
+        { icon: '📥', title: 'Modular Acquisition', desc: 'Hot-swappable input modules for CAN, analog, digital, and serial channels — configurable per deployment.' },
+        { icon: '⏱️', title: 'Precision Timestamping', desc: 'Hardware-level nanosecond timestamps synchronized via GPS PPS signal for multi-channel correlation.' },
+        { icon: '🧮', title: 'Edge Analytics', desc: 'Real-time statistical processing and anomaly detection running on-device without cloud dependency.' },
+        { icon: '🗂️', title: 'MDF4 Logging', desc: 'Industry-standard MDF4 file format output compatible with CANalyzer, MATLAB, and Python toolchains.' },
+        { icon: '🔔', title: 'Smart Alerting', desc: 'Configurable threshold and pattern-based triggers for proactive fault detection and event capture.' },
+        { icon: '🌐', title: 'Cloud Integration', desc: 'Secure MQTT/REST streaming of processed telemetry to AWS, Azure, or on-premise data platforms.' },
+      ],
+      components: [
+        { badge: 'HW', badgeClass: 'hw', name: 'ARM Cortex-A + FPGA SoC (Xilinx Zynq)', desc: 'Heterogeneous processing: ARM application core for analytics and FPGA fabric for deterministic I/O.' },
+        { badge: 'HW', badgeClass: 'hw', name: 'Multi-Channel 24-bit ADC', desc: 'Simultaneous sampling ADC frontend with anti-alias filtering for precision analog signal acquisition.' },
+        { badge: 'HW', badgeClass: 'hw', name: 'GPS Disciplined Oscillator', desc: 'PPS-synchronized clock source providing sub-microsecond timestamp accuracy across all channels.' },
+        { badge: 'FW', badgeClass: 'fw', name: 'FPGA Acquisition Core (VHDL)', desc: 'Custom FPGA IP for deterministic multi-protocol capture with hardware timestamping and DMA offload.' },
+        { badge: 'SW', badgeClass: 'sw', name: 'Signal Processing DSP Library', desc: 'On-device FFT, filtering, and statistical analysis pipeline optimized for embedded ARM NEON.' },
+        { badge: 'PROTO', badgeClass: 'proto', name: 'MDF4 / A2L / DBC Support', desc: 'Native parsing and export of automotive measurement formats for direct tool-chain compatibility.' },
+        { badge: 'SW', badgeClass: 'sw', name: 'REST API + WebSocket Server', desc: 'Embedded HTTP/WebSocket server for live data streaming and remote configuration via browser or script.' },
+        { badge: 'OS', badgeClass: 'os', name: 'Linux RT (PREEMPT-RT)', desc: 'Real-time Linux kernel with priority-inheritance mutexes ensuring deterministic acquisition scheduling.' },
+      ]
+    },
+
+    zonal: {
+      icon: '🗂️', iconBg: 'rgba(255,100,180,0.1)',
+      title: 'Zonal Architecture',
+      subtitle: 'High-Level Architecture · Software-Defined Vehicle E/E Topology',
+      diagram: `<div class="arch-diagram"><div class="arch-diagram-title">System Architecture Overview</div><div class="arch-layers">
+        <div class="arch-layer"><div class="arch-layer-label">Central Compute</div><div class="arch-layer-blocks"><div class="arch-block pink">Vehicle Computer (HPC)</div><div class="arch-block pink">OTA Manager</div><div class="arch-block pink">Cybersecurity Gateway</div></div></div>
+        <div class="arch-arrow">↓</div>
+        <div class="arch-layer"><div class="arch-layer-label">Backbone</div><div class="arch-layer-blocks"><div class="arch-block blue">1000BASE-T1 Automotive Ethernet</div><div class="arch-block blue">TSN (Time-Sensitive Networking)</div></div></div>
+        <div class="arch-arrow">↓</div>
+        <div class="arch-layer"><div class="arch-layer-label">Zone Controllers</div><div class="arch-layer-blocks"><div class="arch-block teal">Zone A — Front</div><div class="arch-block teal">Zone B — Rear</div><div class="arch-block teal">Zone C — Left</div><div class="arch-block teal">Zone D — Right</div></div></div>
+        <div class="arch-arrow">↓</div>
+        <div class="arch-layer"><div class="arch-layer-label">Local Bus</div><div class="arch-layer-blocks"><div class="arch-block orange">CAN-FD (Actuators)</div><div class="arch-block orange">LIN (Low-Speed Sensors)</div><div class="arch-block orange">100BASE-T1 (Cameras / Radar)</div></div></div>
+        <div class="arch-arrow">↓</div>
+        <div class="arch-layer"><div class="arch-layer-label">Endpoints</div><div class="arch-layer-blocks"><div class="arch-block green">Smart Actuators</div><div class="arch-block green">Sensor Nodes</div><div class="arch-block green">Body Control Modules</div><div class="arch-block green">Lighting / HVAC ECUs</div></div></div>
+        <div class="arch-arrow">↓</div>
+        <div class="arch-layer"><div class="arch-layer-label">Software</div><div class="arch-layer-blocks"><div class="arch-block purple">AUTOSAR Classic / Adaptive</div><div class="arch-block purple">SOME/IP Service Mesh</div><div class="arch-block purple">Diagnostic over IP (DoIP)</div></div></div>
+      </div></div>`,
+      functionality: [
+        { icon: '🗺️', title: 'Geographic Zoning', desc: 'Vehicle partitioned into physical zones (front, rear, left, right) each served by a dedicated zone controller MCU.' },
+        { icon: '📉', title: 'Wiring Harness Reduction', desc: 'Centralized zone controllers eliminate point-to-point ECU wiring, cutting harness weight by up to 50%.' },
+        { icon: '🔄', title: 'Software-Defined Functions', desc: 'Vehicle features deployed as software services over Ethernet, enabling OTA feature addition and updates.' },
+        { icon: '⏱️', title: 'TSN Determinism', desc: 'IEEE 802.1 Time-Sensitive Networking ensures bounded latency for safety-critical actuator commands.' },
+        { icon: '🔐', title: 'Cyber Security Gateway', desc: 'Central firewall and IDS enforcing AUTOSAR SecOC message authentication and zone traffic isolation.' },
+        { icon: '🔧', title: 'Unified Diagnostics', desc: 'DoIP enables remote UDS diagnostics across all zone controllers over the Ethernet backbone.' },
+      ],
+      components: [
+        { badge: 'HW', badgeClass: 'hw', name: 'Zone Controller MCU (NXP S32G / Renesas RH850)', desc: 'Automotive-qualified multi-core MCU acting as local gateway, I/O hub, and service orchestrator per zone.' },
+        { badge: 'HW', badgeClass: 'hw', name: '1000BASE-T1 Automotive Ethernet Switch', desc: 'In-vehicle Ethernet backbone switch with TSN support for deterministic multi-zone communication.' },
+        { badge: 'PROTO', badgeClass: 'proto', name: 'IEEE 802.1 TSN (AS / Qbv / Qav)', desc: 'Time-aware shaping and scheduling protocols guaranteeing sub-millisecond latency for safety traffic.' },
+        { badge: 'OS', badgeClass: 'os', name: 'AUTOSAR Classic + Adaptive', desc: 'Classic AUTOSAR on zone MCUs for real-time control; Adaptive AUTOSAR on HPC for service-oriented apps.' },
+        { badge: 'PROTO', badgeClass: 'proto', name: 'SOME/IP + Service Discovery', desc: 'Service-oriented communication layer enabling dynamic ECU service registration and consumption.' },
+        { badge: 'SW', badgeClass: 'sw', name: 'OTA Update Manager (AUTOSAR UCM)', desc: 'Orchestrates secure, differential OTA software updates across all zone controllers simultaneously.' },
+        { badge: 'FW', badgeClass: 'fw', name: 'SecOC (Secure Onboard Communication)', desc: 'Message authentication codes on every safety-relevant CAN/Ethernet frame for runtime integrity.' },
+        { badge: 'PROTO', badgeClass: 'proto', name: 'DoIP (ISO 13400)', desc: 'Diagnostics over IP protocol enabling remote UDS sessions to any ECU through the Ethernet backbone.' },
       ]
     }
   };
